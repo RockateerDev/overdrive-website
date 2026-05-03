@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overdrive Games</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="/">Overdrive Games</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Independent game studio</p>
+      <h1 class="hero-title">We build games.<br>You play them.</h1>
+      <p class="hero-lead">
+        Placeholder landing page for hosting tests. Swap this block when you’re ready for the real debut.
+      </p>
+      <a class="button" href="#contact">Get in touch</a>
+    </section>
+
+    <section class="panel" id="about">
+      <h2>About</h2>
+      <p>
+        Overdrive Games is a games company focused on playable, polished experiences.
+        This site is a minimal template so you can verify DNS, HTTPS, caching, and deploy pipelines.
+      </p>
+    </section>
+
+    <section class="panel panel-alt" id="contact">
+      <h2>Contact</h2>
+      <p>
+        Add your studio email or social links here when you're ready.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Overdrive Games</p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
