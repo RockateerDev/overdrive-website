@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=about/">
-  <title>Redirecting…</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Games by Overdrive Games.">
+  <title>Games — Overdrive Games</title>
+  <link rel="stylesheet" href="../styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&family=Orbitron:wght@400;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
   <video class="bg-video" autoplay muted loop playsinline aria-hidden="true">
-    <source src="assets/video/gridBackground.mp4" type="video/mp4">
+    <source src="../assets/video/gridBackground.mp4" type="video/mp4">
   </video>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="logo glint" href="./">Overdrive Games</a>
+      <a class="logo glint" href="../">Overdrive Games</a>
       <nav class="nav" aria-label="Main">
-        <a href="./">Home</a>
-        <a href="about/" aria-current="page">About</a>
-        <a href="contact/">Contact</a>
-        <a href="games/">Games</a>
+        <a href="../">Home</a>
+        <a href="../about/">About</a>
+        <a href="../contact/">Contact</a>
+        <a href="./" aria-current="page">Games</a>
       </nav>
     </div>
   </header>
@@ -29,8 +29,14 @@
   <main>
     <article class="page-main page-main--center">
       <div class="wrap">
-        <h1 class="page-title glint">Redirecting…</h1>
-        <p class="page-lede muted"><a href="about/">Continue to About</a></p>
+        <h1 class="page-title glint">Games</h1>
+        <ul class="card-list">
+          <li class="card">
+            <h3>Unannounced Title</h3>
+            <p>A 1-4 player co-op sim.</p>
+            <p>Coming 2027</p>
+          </li>
+        </ul>
       </div>
     </article>
   </main>
@@ -44,6 +50,6 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="About Overdrive Games.">
+  <title>About — Overdrive Games</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600&family=Orbitron:wght@400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <video class="bg-video" autoplay muted loop playsinline aria-hidden="true">
+    <source src="../assets/video/gridBackground.mp4" type="video/mp4">
+  </video>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo glint" href="../">Overdrive Games</a>
+      <nav class="nav" aria-label="Main">
+        <a href="../">Home</a>
+        <a href="./" aria-current="page">About</a>
+        <a href="../contact/">Contact</a>
+        <a href="../games/">Games</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="page-main page-main--about">
+      <div class="wrap">
+        <h1 class="page-title glint">About</h1>
+        <div class="page-copy">
+          <p>Overdrive Games exists with the goal to preserve, charge and reignite the passion of '80s culture through the immersive medium of games.</p>
+          <p>Striving to combine elements from the cinema, music, and aesthetics of the 1980s decade with the heat and spirit of <a href="https://aesthetics.fandom.com/wiki/Synthwave">neo-retrofuturism</a> movements found on the internet today. Old and new collide to capture both the grit and grandeur of one of the most legendary periods in human culture.</p>
+          <p>Based in the heart of <a href="https://guildford.games/about">Guildford</a>, UK - operated as a proudly independent solo project.</p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="y"></span> Overdrive Games</span>
+    </div>
+  </footer>
+  <div class="retro-overlay"></div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+  <script src="../script.js"></script>
+</body>
+</html>
