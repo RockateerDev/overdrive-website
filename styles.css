@@ -558,6 +558,13 @@ main {
   padding: clamp(1.5rem, 4vh, 3rem) 1rem;
   position: relative;
   z-index: 1;
+  overflow: hidden;
+}
+
+body:has(.hero--home) {
+  height: calc(100vh - (var(--crt-frame) * 2));
+  max-height: calc(100vh - (var(--crt-frame) * 2));
+  overflow: hidden;
 }
 
 .home-logo-wrap {
@@ -566,6 +573,7 @@ main {
   align-items: center;
   justify-content: center;
   width: min(100% - 2rem, 36rem);
+  max-height: calc(100vh - 11rem);
   text-decoration: none;
   color: inherit;
   cursor: pointer;
@@ -623,20 +631,34 @@ main {
   }
 }
 
+.home-logo-scale {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  max-height: calc(100vh - 11rem);
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
+}
+
+.home-logo-wrap.is-charged .home-logo-scale {
+  transform: scale(1.14);
+}
+
 .home-logo {
   position: relative;
   z-index: 1;
   display: block;
   width: 100%;
   height: auto;
+  max-height: calc(100vh - 11rem);
+  object-fit: contain;
   user-select: none;
   -webkit-user-drag: none;
   will-change: filter, transform;
-  transform: scale(1);
   transform-origin: center center;
-  transition:
-    filter 0.35s ease,
-    transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
   filter:
     drop-shadow(0 0 12px rgba(48, 240, 255, 0.35))
     drop-shadow(0 0 28px rgba(255, 56, 210, 0.28))
@@ -647,10 +669,12 @@ main {
   .home-logo {
     animation: home-logo-glow 3.6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
   }
-}
 
-.home-logo-wrap.is-charged .home-logo {
-  transform: scale(1.14);
+  .home-logo-wrap.is-charged .home-logo {
+    animation:
+      home-logo-glow 3.6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite,
+      home-logo-tremble 0.28s ease-in-out infinite;
+  }
 }
 
 @keyframes home-logo-glow {
@@ -668,6 +692,25 @@ main {
       drop-shadow(0 0 48px rgba(255, 56, 210, 0.55))
       drop-shadow(0 0 72px rgba(255, 140, 66, 0.22))
       drop-shadow(0 12px 36px rgba(0, 0, 0, 0.55));
+  }
+}
+
+@keyframes home-logo-tremble {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(0.6px, -0.4px) rotate(-0.18deg);
+  }
+
+  50% {
+    transform: translate(-0.5px, 0.5px) rotate(0.16deg);
+  }
+
+  75% {
+    transform: translate(0.4px, 0.3px) rotate(-0.12deg);
   }
 }
 
